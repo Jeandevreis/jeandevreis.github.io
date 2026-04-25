@@ -1,0 +1,91 @@
+{
+  "menu": {
+    "home": "Início",
+    "about": "Sobre",
+    "projects": "Projetos",
+    "educations": "Educação",
+    "contact": "Contato"
+  },
+  "hero": {
+    "availability": "Disponível para novos projetos",
+    "description": "Construindo o futuro da web com",
+    "descriptionHighlight": "Criatividade, Código e Comprometimento.",
+    "subtext": "Desenvolvedor full-stack apaixonado por interfaces elegantes e código limpo. Transformando ideias em produtos digitais que as pessoas adoram usar.",
+    "cta-button-cv": "Baixar Currículo",
+    "cta-button-projects": "Ver Projetos"
+  },
+  "about": {
+    "title": "Sobre mim",
+    "nacionality": "Brasileiro",
+    "age": "{{year}} Anos",
+    "location": "Cachoeirinha - RS, Brasil",
+    "university": "Análise e Desenvolvimento de Sistemas",
+    "bio": {
+      "title": "Desenvolvedor Web Full-Stack",
+      "paragraph1": "Olá! Sou um <strong>desenvolvedor Full Stack</strong> em transição de carreira, com 8 anos de experiência na área de <strong>social media</strong> e atendimento a clientes. Minha jornada no desenvolvimento começou como um hobby que rapidamente se tornou minha paixão. Atualmente, estou cursando <strong>Análise e Desenvolvimento de Sistemas</strong> para formalizar e expandir meu conhecimento.",
+      "paragraph2": "Tenho uma sólida compreensão de tecnologias front-end como <strong>React</strong>, <strong>JavaScript</strong>, <strong>CSS3</strong> e <strong>HTML5</strong>, utilizadas para criar interfaces dinâmicas e responsivas que proporcionam experiências de usuário excepcionais. Além disso, estou constantemente explorando e aprendendo mais sobre <strong>Vue.js</strong>, <strong>Node.js</strong> e <strong>PHP</strong>, buscando expandir meu conjunto de habilidades."
+    },
+    "labels": {
+      "nacionality": "Nacionalidade",
+      "age": "Idade",
+      "location": "Localização",
+      "cursing": "Cursando"
+    }
+  },
+  "projects": {
+    "readMore": "Continuar lendo",
+    "showLess": "Mostrar menos",
+    "viewProject": "Ver Projeto",
+    "code": "Código"
+  },
+  "educations": {
+    "title": "Educação",
+    "viewCertificate": "Ver Certificado",
+    "Educations": {
+      "types": {
+        "college": "Faculdade",
+        "course": "Curso",
+        "certification": "Certificação",
+        "bootcamp": "Bootcamp"
+      }
+    },
+    "date": {
+      "present": "Presente"
+    },
+    "readMore": "Continuar lendo"
+  },
+  "contact": {
+    "title": "Contato",
+    "form": {
+      "name": {
+        "label": "Nome",
+        "placeholder": "Seu nome"
+      },
+      "company": {
+        "label": "Empresa",
+        "placeholder": "Sua empresa"
+      },
+      "email": {
+        "label": "E-mail",
+        "placeholder": " Seu e-mail"
+      },
+      "whatsapp": {
+        "label": "WhatsApp",
+        "placeholder": "Seu número de WhatsApp"
+      },
+      "message": {
+        "label": "Mensagem",
+        "placeholder": "Escreva sua mensagem aqui..."
+      },
+      "submit": "Enviar Mensagem",
+      "messages": {
+        "success": "Mensagem enviada com sucesso!",
+        "validationError": "Por favor, preencha um e-mail ou número de WhatsApp.",
+        "genericError": "Ocorreu um erro ao enviar a mensagem. Tente novamente mais tarde."
+      }
+    }
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados © {{year}} | Desenvolvido com ❤️ por Willian D. Daniel"
+  }
+}

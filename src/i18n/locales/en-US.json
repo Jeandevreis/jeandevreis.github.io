@@ -1,0 +1,92 @@
+{
+  "menu": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "educations": "Educations",
+    "contact": "Contact"
+  },
+  "hero": {
+    "availability": "Available for new projects",
+    "description": "Building the future of the web with",
+    "descriptionHighlight": "Creativity, Code, and Commitment.",
+    "subtext": "Full-stack developer passionate about elegant interfaces and clean code. Turning ideas into digital products that people love to use.",
+    "cta-button-cv": "Download CV",
+    "cta-button-projects": "View Projects"
+  },
+  "about": {
+    "title": "About me",
+    "nacionality": "Brazilian",
+    "age": "{{year}} Years Old",
+    "location": "Cachoeirinha - RS, Brazil",
+    "cursing": "Currently studying",
+    "university": "Analysis and Systems Development",
+    "bio": {
+      "title": "Full-Stack Web Developer",
+      "paragraph1": "Hello! I am a <strong>Full Stack developer</strong> in career transition, with 8 years of experience in <strong>social media</strong> and customer service. My journey into development started as a hobby that quickly became my passion. Currently, I am studying <strong>Analysis and Systems Development</strong> to formalize and expand my knowledge.",
+      "paragraph2": "I have a solid understanding of front-end technologies like <strong>React</strong>, <strong>JavaScript</strong>, <strong>CSS3</strong>, and <strong>HTML5</strong>, used to create dynamic and responsive interfaces that provide exceptional user experiences. Additionally, I am constantly exploring and learning more about <strong>Vue.js</strong>, <strong>Node.js</strong>, and <strong>PHP</strong>, seeking to expand my skill set."
+    },
+    "labels": {
+      "nacionality": "Nationality",
+      "age": "Age",
+      "location": "Location",
+      "cursing": "Currently Studying"
+    }
+  },
+  "projects": {
+    "readMore": "Read more",
+    "showLess": "Show less",
+    "viewProject": "View Project",
+    "code": "Code"
+  },
+  "educations": {
+    "title": "Education",
+    "viewCertificate": "View Certificate",
+    "Educations": {
+      "types": {
+        "college": "College",
+        "course": "Course",
+        "certification": "Certification",
+        "bootcamp": "Bootcamp"
+      }
+    },
+    "date": {
+      "present": "Present"
+    },
+    "readMore": "Read more"
+  },
+  "contact": {
+    "title": "Contact",
+    "form": {
+      "name": {
+        "label": "Name",
+        "placeholder": "Your name"
+      },
+      "company": {
+        "label": "Company",
+        "placeholder": "Your company"
+      },
+      "email": {
+        "label": "E-mail",
+        "placeholder": " Your e-mail"
+      },
+      "whatsapp": {
+        "label": "WhatsApp",
+        "placeholder": "Your WhatsApp number"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Write your message here..."
+      },
+      "submit": "Send Message",
+      "messages": {
+        "success": "Message sent successfully!",
+        "validationError": "Please fill in an email or WhatsApp number.",
+        "genericError": "An error occurred while sending the message. Please try again later."
+      }
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved © {{year}} | Developed with ❤️ by Willian D. Daniel"
+  }
+}
