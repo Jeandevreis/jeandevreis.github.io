@@ -5,6 +5,19 @@ interface LanguageSwitcherProps {
   mobile?: boolean;
 }
 
+// URLs para bandeiras circulares (você pode baixar e usar localmente se preferir)
+const FLAGS: Record<string, string> = {
+  "pt-BR": "menu-bandeira-br.jpg",
+  "en-US": "menu-bandeira-en.png",
+  "es-ES": "menu-bandeira-es.jpg",
+};
+
+const LABELS: Record<string, string> = {
+  "pt-BR": "PT",
+  "en-US": "EN",
+  "es-ES": "ES",
+};
+
 export default function LanguageSwitcher({ mobile = false }: LanguageSwitcherProps) {
   const { i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +28,10 @@ export default function LanguageSwitcher({ mobile = false }: LanguageSwitcherPro
     setIsOpen(false);
   };
 
-  const currentLanguage = i18n.language || "pt-BR";
+  // Garante que o idioma atual mapeia corretamente para as chaves disponíveis
+  const currentLanguage = Object.keys(FLAGS).find(key =>
+    i18n.language?.includes(key.split('-')[0])
+  ) || "pt-BR";
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -28,37 +44,31 @@ export default function LanguageSwitcher({ mobile = false }: LanguageSwitcherPro
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const getDisplayLanguage = () => {
-    if (currentLanguage.includes("en")) return "EN-US";
-    if (currentLanguage.includes("es")) return "ES-ES";
-    return "PT-BR";
-  };
+  // Exibe no dropdown apenas os idiomas que NÃO estão selecionados atualmente
+  const availableLanguages = Object.keys(FLAGS).filter(lang => lang !== currentLanguage);
 
   return (
     <div className="relative flex justify-center" ref={dropdownRef}>
+      {/* Botão Principal */}
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="
-          flex items-center gap-2 px-3 py-2 text-sm font-medium text-white
-          transition-colors duration-200 shadow-sm hover:text-zinc-300
+          flex items-center gap-2 px-3 py-1.5 rounded-full
+          bg-[#024049] border border-white/50 
+          transition-colors duration-200 shadow-sm hover:bg-[#03515c]
         "
         aria-expanded={isOpen}
         aria-haspopup="true"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="m5 8 6 6" />
-          <path d="m4 14 6-6 2-3" />
-          <path d="M2 5h12" />
-          <path d="M7 2h1" />
-          <path d="m22 22-5-10-5 10" />
-          <path d="M14 18h6" />
-        </svg>
-
-        <span className={`${mobile ? "text-lg" : ""}`}>{getDisplayLanguage()}</span>
+        <img
+          src={FLAGS[currentLanguage]}
+          alt="Idioma Selecionado"
+          className={`rounded-full object-cover shadow-sm ${mobile ? 'w-6 h-6' : 'w-5 h-5'}`}
+        />
 
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className={`w-4 h-4 text-zinc-400 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
+          className="w-4 h-4 text-white"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -68,31 +78,37 @@ export default function LanguageSwitcher({ mobile = false }: LanguageSwitcherPro
         </svg>
       </button>
 
+      {/* Dropdown Menu */}
       {isOpen && (
         <div className={`
-          absolute mt-10 w-40 bg-white dark:bg-zinc-900 rounded-md shadow-lg border border-zinc-200 dark:border-zinc-800
-          z-50 py-1 overflow-hidden animate-in fade-in slide-in-from-top-2
-          ${mobile ? "left-1/2 -translate-x-1/2 origin-top" : "right-0 origin-top-right"}
+          absolute mt-12 w-27.5 bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] 
+          z-50 py-3 animate-in fade-in zoom-in-95
+          ${mobile ? "left-1/2 -translate-x-1/2" : "right-1/2 translate-x-1/2"}
         `}>
-          {["pt-BR", "en-US", "es-ES"].map((lang) => {
-            const labels: Record<string, string> = { "pt-BR": "Português (BR)", "en-US": "English (US)", "es-ES": "Español (ES)" };
-            const isActive = currentLanguage.includes(lang.split('-')[0]);
+          {/* Seta azul apontando para cima */}
+          <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-[#00c3ff] rotate-45 rounded-sm -z-10"></div>
 
-            return (
+          <div className="flex flex-col gap-1">
+            {availableLanguages.map((lang) => (
               <button
                 key={lang}
                 onClick={() => handleLanguageChange(lang)}
-                className={`
-                  w-full text-left px-4 py-2 text-sm transition-colors duration-150
-                  ${isActive
-                    ? "bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 font-medium"
-                    : "text-zinc-600 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 hover:text-zinc-900 dark:hover:text-zinc-100"}
-                `}
+                className="
+                  flex items-center justify-center gap-3 w-full px-4 py-2 
+                  hover:bg-zinc-50 transition-colors
+                "
               >
-                {labels[lang]}
+                <img
+                  src={FLAGS[lang]}
+                  alt={LABELS[lang]}
+                  className="w-6 h-6 rounded-full object-cover shadow-sm"
+                />
+                <span className="text-[#1e293b] font-medium text-sm">
+                  {LABELS[lang]}
+                </span>
               </button>
-            )
-          })}
+            ))}
+          </div>
         </div>
       )}
     </div>

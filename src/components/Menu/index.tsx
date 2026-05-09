@@ -1,6 +1,4 @@
 import { useTranslation } from "react-i18next";
-import LanguageSwitcher from "../LanguageSwitcher";
-import ThemeToggle from "../ToggleTheme";
 
 interface MenuProps {
   mobile?: boolean;
@@ -31,11 +29,6 @@ export default function Menu({ mobile = false, onClose }: MenuProps) {
         <li><a href="#about" onClick={handleClick} className="hover:text-white transition-colors">{t("menu.about")}</a></li>
         <li><a href="#projects" onClick={handleClick} className="hover:text-white transition-colors">{t("menu.projects")}</a></li>
         <li><a href="#contact" onClick={handleClick} className="hover:text-white transition-colors">{t("menu.contact")}</a></li>
-
-        <li className="flex items-center gap-6 pt-8 mt-4 border-t border-zinc-800 w-3/4 justify-center">
-          <LanguageSwitcher mobile={mobile} />
-          <ThemeToggle />
-        </li>
       </ul>
     );
   }
@@ -51,8 +44,6 @@ export default function Menu({ mobile = false, onClose }: MenuProps) {
       <li><a href="#projects" className="hover:text-white transition-colors">{t("menu.projects")}</a></li>
       <li><a href="#educations" className="hover:text-white transition-colors">{t("menu.educations")}</a></li>
       <li><a href="#contact" className="hover:text-white transition-colors">{t("menu.contact")}</a></li>
-      <li><LanguageSwitcher /></li>
-      <li><ThemeToggle /></li>
     </ul>
   );
 }

@@ -4,6 +4,8 @@ import { createPortal } from "react-dom";
 import Logo from "@/components/Logo";
 import Menu from "@/components/Menu";
 
+import LanguageSwitcher from "../LanguageSwitcher";
+
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -22,7 +24,7 @@ export default function Header() {
     <div
       className={`
         md:hidden fixed top-14 left-0 w-full h-[calc(100dvh-3.5rem)]
-        bg-zinc-950/95 backdrop-blur-md z-999 flex flex-col overflow-y-auto
+        bg-[#002233] backdrop-blur-md z-999 flex flex-col overflow-y-auto
         transition-transform duration-300 ease-in-out
         ${isOpen ? "translate-x-0" : "-translate-x-full"}
       `}
@@ -33,9 +35,9 @@ export default function Header() {
   ) : null;
 
   return (
-    <header className="sticky top-0 left-0 z-50 w-full bg-zinc-950 shadow-sm shadow-zinc-900">
+    <header className="sticky top-0 left-0 z-50 w-full bg-[#002233] shadow-sm shadow-zinc-900">
 
-      <div className="flex items-center justify-between px-6 md:px-16 h-14 bg-zinc-950 relative z-50">
+      <div className="flex items-center justify-between px-6 md:px-16 h-16 bg-[#002233] relative z-50">
         <Logo />
 
         <button
@@ -51,6 +53,9 @@ export default function Header() {
         <div className="hidden md:flex">
           <Menu />
         </div>
+
+
+        <LanguageSwitcher mobile={false} />
       </div>
 
       {mobileMenu}
