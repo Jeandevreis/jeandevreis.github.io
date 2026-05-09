@@ -7,12 +7,14 @@
     "contact": "Contacto"
   },
   "hero": {
-    "availability": "Disponible para nuevos proyectos",
-    "description": "Construyendo el futuro de la web con",
-    "descriptionHighlight": "Creatividad, Código y Compromiso.",
-    "subtext": "Desarrollador full-stack apasionado por las interfaces elegantes y el código limpio. Transformando ideas en productos digitales que a las personas les encanta usar.",
-    "cta-button-cv": "Descargar Currículum",
-    "cta-button-projects": "Ver Proyectos"
+    "badge": "En el campo · Proyectos seleccionados",
+    "intro": "Especialista en Implementación y Consultoría",
+    "titlePart1": "Más de 15 años transformando la ",
+    "titleHighlight": "gestión corporativa",
+    "titlePart2": " con tecnología.",
+    "description": "Analista de sistemas enfocado en optimizar procesos a través de ERPs como Protheus, Sankhya y SAP. Transformo la complejidad fiscal y operativa en resultados eficientes para su negocio.",
+    "ctaTalk": "Hablemos",
+    "ctaSpecialties": "Ver especialidades"
   },
   "about": {
     "title": "Sobre mí",
