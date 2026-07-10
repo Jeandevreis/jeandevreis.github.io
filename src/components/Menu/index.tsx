@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "../LanguageSwitcher";
 
 interface MenuProps {
   mobile?: boolean;
@@ -28,7 +29,12 @@ export default function Menu({ mobile = false, onClose }: MenuProps) {
         </li>
         <li><a href="#about" onClick={handleClick} className="hover:text-white transition-colors">{t("menu.about")}</a></li>
         <li><a href="#projects" onClick={handleClick} className="hover:text-white transition-colors">{t("menu.projects")}</a></li>
+        <li><a href="#educations" onClick={handleClick} className="hover:text-white transition-colors">{t("menu.educations")}</a></li>
         <li><a href="#contact" onClick={handleClick} className="hover:text-white transition-colors">{t("menu.contact")}</a></li>
+
+        <li className="md:hidden">
+          <LanguageSwitcher mobile={true} />
+        </li>
       </ul>
     );
   }

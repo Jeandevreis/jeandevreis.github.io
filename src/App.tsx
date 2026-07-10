@@ -1,9 +1,9 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Projects from "@/components/Projects";
-import Footer from "@/components/Footer";
-import Contact from "./components/Contact";
+// import About from "@/components/About";
+// import Projects from "@/components/Projects";
+// import Footer from "@/components/Footer";
+// import Contact from "./components/Contact";
 import Educations from "./components/Educations";
 
 export default function App() {
@@ -16,11 +16,11 @@ export default function App() {
     ">
       <Header />
       <Hero />
-      <About />
-      <Projects />
+      {/* <About />
+      <Projects /> */}
       <Educations />
-      <Contact />
-      <Footer />
+      {/* <Contact />
+      <Footer /> */}
     </div>
   )
 }

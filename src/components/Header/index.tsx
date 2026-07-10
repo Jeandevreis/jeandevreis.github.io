@@ -54,8 +54,9 @@ export default function Header() {
           <Menu />
         </div>
 
-
-        <LanguageSwitcher mobile={false} />
+        <div className="hidden md:flex">
+          <LanguageSwitcher mobile={false} />
+        </div>
       </div>
 
       {mobileMenu}

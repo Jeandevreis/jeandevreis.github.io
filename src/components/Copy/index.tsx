@@ -4,15 +4,15 @@ export default function Copy() {
   const { t } = useTranslation();
 
   return (
-    <div className="z-10 -mt-8 flex-1 flex flex-col justify-center items-start text-left">
+    <div className="z-10 md:-mt-8 flex-1 flex flex-col justify-center items-center md:items-start text-center md:text-left">
 
-      <div className="mb-10 inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-[#f0f4f6] border border-[#d4dde3] text-[11px] font-medium text-[#002233] tracking-widest uppercase transition-colors duration-300">
+      <div className="mb-6 md:mb-10 inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-[#f0f4f6] border border-[#d4dde3] text-[11px] font-medium text-[#002233] tracking-widest uppercase transition-colors duration-300">
         <span className="w-4.5 h-[1.5px] bg-[#002233] rounded-sm opacity-70"></span>
         <span className="w-1.5 h-1.5 rounded-full bg-[#00DBFF]"></span>
         {t("hero.badge")}
       </div>
 
-      <span className="text-[13px] md:text-sm ml-0.5 text-[#002233]/60 font-medium tracking-wide transition-colors duration-300">
+      <span className="text-[13px] md:text-sm md:ml-0.5 text-[#002233]/60 font-medium tracking-wide transition-colors duration-300">
         {t("hero.intro")}
       </span>
 
@@ -22,11 +22,11 @@ export default function Copy() {
         {t("hero.titlePart2")}
       </h1>
 
-      <p className="mt-3 md:mt-4 text-[13.5px] md:text-[15px] text-[#002233]/65 max-w-lg leading-relaxed transition-colors duration-300">
+      <p className="mt-3 md:mt-4 mx-auto md:mx-0 text-[13.5px] md:text-[15px] text-[#002233]/65 max-w-lg leading-relaxed transition-colors duration-300">
         {t("hero.description")}
       </p>
 
-      <div className="flex flex-wrap items-center gap-2.5 md:gap-3 mt-5 md:mt-10 w-full">
+      <div className="flex flex-wrap justify-center md:justify-start items-center gap-2.5 md:gap-3 mt-6 md:mt-10 w-full">
 
         <a
           href="https://wa.me/SEUNUMERO"
