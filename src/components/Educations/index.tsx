@@ -45,7 +45,6 @@ export default function Educations() {
     fetchEducations();
   }, []);
 
-  // Formatar data para exibição (Ex: "Jun 2023")
   const formatDate = (dateString: string) => {
     if (!dateString) return "";
     const date = new Date(dateString);
@@ -60,7 +59,7 @@ export default function Educations() {
       <div className="max-w-7xl mx-auto flex flex-col">
 
         {/* Cabeçalho da Seção */}
-        <div className="mb-10 md:mb-14 flex flex-col items-center text-center">
+        <div className="mb-9 md:mb-14 flex flex-col items-center text-center">
           <div className="mb-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-[#f0f4f6] border border-[#d4dde3] text-[11px] font-medium text-[#002233] tracking-widest uppercase">
             <span className="w-4.5 h-[1.5px] bg-[#002233] rounded-sm opacity-70"></span>
             <span className="w-1.5 h-1.5 rounded-full bg-[#00DBFF]"></span>
